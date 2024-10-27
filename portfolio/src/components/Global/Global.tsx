@@ -55,8 +55,9 @@ const GlobalSolution = () => {
 
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6 text-red-600">Global Solution</h1>
-      <h2 className="text-xl font-semibold mb-4 text-red-500">Disciplinas</h2>
+      <h1 className="text-3xl font-bold mb-6 text-white">GLOBAL SOLUCTION</h1>
+      <div className="w-full h-0.5 bg-red-500 mb-4"></div>
+      <h2 className="text-xl font-semibold mb-4 text-white">DISCIPLINAS</h2>
       <div className="space-y-4">
         {materias.map((materia, index) => (
           <div

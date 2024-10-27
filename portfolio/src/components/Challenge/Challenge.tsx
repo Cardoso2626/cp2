@@ -100,8 +100,9 @@ const ChallengesSprint = () => {
 
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6 text-red-600">Challenges Sprint</h1>
-      <h2 className="text-xl font-semibold mb-4 text-red-500">Disciplinas</h2>
+      <h1 className="text-3xl font-bold mb-6 text-white">CHALLENGE SPRINT</h1>
+      <div className="w-full h-0.5 bg-red-500 mb-4"></div>
+      <h2 className="text-xl font-semibold mb-4 text-white">DISCIPLINAS</h2>
       <ul className="list-disc pl-6 mb-6">
         {materia.map((materia, index) => (
           <li key={index}>
@@ -141,8 +142,8 @@ const ChallengesSprint = () => {
             <h2 className="text-xl font-bold mb-4">Detalhes do Entregável</h2>
             {selectedDelivery && (
               <>
-                <p><strong>Conteúdo:</strong> {selectedDelivery.entrega}</p>
-                <p><strong>Feedback:</strong> {selectedDelivery.feedback}</p>
+                <p className='mb-2'><strong>Conteúdo:</strong> {selectedDelivery.entrega}</p>
+                <p className='mb-2'><strong>Feedback:</strong> {selectedDelivery.feedback}</p>
                 <p><strong>Nota:</strong> {selectedDelivery.grade}</p>
               </>
             )}
