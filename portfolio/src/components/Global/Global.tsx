@@ -3,9 +3,16 @@
 import React, { useState } from 'react';
 
 const GlobalSolution = () => {
-  const [entregavelAberto, setEntregavelAberto] = useState(null);
+  const [entregavelAberto, setEntregavelAberto] = useState<number | null>(null);
 
-  const materias = [
+
+  type Materia = {
+    nome: string;
+    nota: number;
+    descricao: string;
+    feedback: string;
+  };
+  const materias:Materia[] = [
     { 
         nome: 'AI & Chatbot', 
         nota: 85, 
@@ -49,7 +56,7 @@ const GlobalSolution = () => {
     },
   ];
 
-  const toggleEntregavel = (index) => {
+  const toggleEntregavel = (index: number) => {
     setEntregavelAberto(entregavelAberto === index ? null : index);
   };
 

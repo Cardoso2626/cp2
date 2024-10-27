@@ -6,6 +6,17 @@ import React, { useState } from 'react';
 const ChallengesSprint = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedDelivery, setSelectedDelivery] = useState(null);
+  
+
+  type Delivery = {
+    content: string;
+    date: string;
+    feedback: string;
+    grade: number;
+    entrega: string;
+  };
+
+
 
   const materia = [
     {
@@ -87,11 +98,11 @@ const ChallengesSprint = () => {
       ],
     },
   ];
-
-  const handleDeliveryClick = (delivery)  => {
+  const handleDeliveryClick = (delivery: Delivery) => {
     setSelectedDelivery(delivery);
     setModalOpen(true);
   };
+
 
   const closeModal = () => {
     setModalOpen(false);
