@@ -2,6 +2,8 @@ export interface Avaliacao {
     id?: number; // id opcional
     nome: string;
     nota: number;
+    materia: string;
+    tipo: string
 }
 
 // Função para buscar todas as avaliações
