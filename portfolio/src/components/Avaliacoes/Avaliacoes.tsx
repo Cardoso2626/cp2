@@ -76,7 +76,7 @@ export default function Avaliacoes() {
                 />
                 <button
                     onClick={novaAvaliacao.id ? handleAtualizarAvaliacao : handleAdicionarAvaliacao}
-                    className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg transition duration-300"
+                    className="bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded-lg transition duration-300"
                 >
                     {novaAvaliacao.id ? "Atualizar Avaliação" : "Adicionar Avaliação"}
                 </button>

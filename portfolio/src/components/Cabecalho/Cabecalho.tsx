@@ -12,6 +12,12 @@ const Cabecalho = () => {
           <Link href="/avaliacoes" className="text-lg font-medium hover:text-red-500 transition duration-300">
             Avaliacoes
           </Link>
+          <Link href="/challenge" className="text-lg font-medium hover:text-red-500 transition duration-300">
+            Challenge
+          </Link>
+          <Link href="/global" className="text-lg font-medium hover:text-red-500 transition duration-300">
+            Global Soluction
+          </Link>
         </div>
       </nav>
     </header>
