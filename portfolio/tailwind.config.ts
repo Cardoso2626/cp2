@@ -11,7 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)", // Usando o gradiente de fundo
+        background: "var(--background)", 
         foreground: "var(--foreground)", 
         primary: "var(--primary)",
         secondary: "var(--secondary)",

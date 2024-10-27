@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-// Define o caminho do arquivo JSON
 const filePath = path.join(process.cwd(), 'src', 'data', 'avaliacoes.json');
 
 interface Avaliacao {
@@ -11,7 +10,6 @@ interface Avaliacao {
     nota: number;
 }
 
-// Função auxiliar para ler o arquivo JSON
 const lerAvaliacoes = (): Avaliacao[] => {
     try {
         const data = fs.readFileSync(filePath, 'utf-8');
@@ -22,7 +20,6 @@ const lerAvaliacoes = (): Avaliacao[] => {
     }
 };
 
-// Função auxiliar para salvar dados no arquivo JSON
 const salvarAvaliacoes = (avaliacoes: Avaliacao[]) => {
     try {
         fs.writeFileSync(filePath, JSON.stringify(avaliacoes, null, 2));
@@ -31,13 +28,11 @@ const salvarAvaliacoes = (avaliacoes: Avaliacao[]) => {
     }
 };
 
-// Função para obter todas as avaliações
 export async function GET() {
     const avaliacoes = lerAvaliacoes();
     return NextResponse.json(avaliacoes);
 }
 
-// Função para adicionar uma nova avaliação
 export async function POST(request: Request) {
     const novaAvaliacao = await request.json();
     const avaliacoes = lerAvaliacoes();
@@ -47,7 +42,6 @@ export async function POST(request: Request) {
     return NextResponse.json(novaEntrada, { status: 201 });
 }
 
-// Função para atualizar uma avaliação existente
 export async function PUT(request: Request) {
     const { id, ...rest } = await request.json();
     const avaliacoes = lerAvaliacoes();
@@ -60,7 +54,6 @@ export async function PUT(request: Request) {
     return NextResponse.json({ message: 'Avaliação atualizada' });
 }
 
-// Função para deletar uma avaliação
 export async function DELETE(request: Request) {
     const { id } = await request.json();
     let avaliacoes = lerAvaliacoes();
